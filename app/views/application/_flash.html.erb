@@ -1,0 +1,13 @@
+<% if !flash.empty? %>
+  <div class="text-center">
+    <% flash.each do |msg| %>
+      <!-- Flash messages begins here -->
+      <div class="alert alert-<%= msg[0] %> alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span></button>
+        <strong><%= msg[0].titleize %>!</strong> <%= msg[1] %>
+      </div>
+      <!-- Flash messages end here -->
+    <% end %>
+  </div>
+<% end %>

@@ -10,8 +10,10 @@
 
 <%= render "navbar" %>
 
-<% if !notice.nil? %>
-  <p id="notice"><%= notice %></p>
+<% if !flash.nil? %>
+  <div class="container">
+    <%= render 'flash' %>
+  </div>
 <% end %>
 
 <div class="container-fluid">
