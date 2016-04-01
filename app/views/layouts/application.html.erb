@@ -10,6 +10,10 @@
 
 <%= render "navbar" %>
 
+<% if !notice.nil? %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
 <div class="container-fluid">
   <%= yield %>
 </div>
